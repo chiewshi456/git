@@ -41,3 +41,52 @@ venv/
 tmp/
 temp/
 
+# Package manager caches
+.pnpm-store/
+pnpm-debug.log*
+
+# Local AI/editor/session state
+.claude/
+.claudian/
+.playwright-cli/
+.obsidian/
+*.code-workspace
+Obsidian Vault/
+
+# Nested/reference repositories kept outside this public backup
+Horizon/
+Open-LLM-VTuber/
+external_repos/
+
+# Local MIKA memory and generated runtime context
+AGENTS.md
+MIKA.md
+MIKA/knowledge_system/
+MIKA/automation_prompts/
+
+# Local agent/Codex notes and helper scripts
+CODEX.md
+codex_window_sync.md
+agent-context.ps1
+agent-learn.ps1
+
+# Research notes and local planning documents
+Horizon AI 信息收集系统.md
+Neuro-like AI 知识库迭代机制方案.md
+research_reddit_jina.md
+research_reddit_neuro.html
+research_youtube_EXICATDyYWI_transcript.txt
+LICENSE.md
+
+# App runtime memory, test scratch data, and generated model artifacts
+ai-vtuber-mvp/tests/.tmp/
+ai-vtuber-mvp/**/*memory*.json
+brain_core/tmp_*/
+brain_core/**/__pycache__/
+brain_core/**/*memory*.json
+brain_core/aaa/
+brain_core/training/dataset.jsonl
+brain_core/training/starter_dataset.jsonl
+brain_core/training/models/
+neuro_like_ai_brain/**/*memory*.json
+

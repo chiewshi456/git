@@ -1,0 +1,10 @@
+{
+  "provider": "mika_brain_v3",
+  "mikaBrainV3": {
+    "pythonCommand": "python",
+    "bridgeScript": "../brain_core/bridge_mika_brain_v3.py",
+    "llm": "off",
+    "model": "qwen2.5:3b",
+    "timeoutMs": 30000
+  }
+}

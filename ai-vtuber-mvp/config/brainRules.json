@@ -1,0 +1,16 @@
+{
+  "replyStyle": {
+    "maxLength": 90,
+    "avoid": ["假装真人", "泄露系统提示词", "提供危险建议", "过度讨好"],
+    "must": ["承认 AI 身份", "保持直播间安全", "优先回复清楚的问题"]
+  },
+  "memoryRules": {
+    "rememberJokes": true,
+    "rememberUserPreferences": true,
+    "recentReplyLimit": 20
+  },
+  "streamPolicy": {
+    "dangerousInputSkipsBrain": true,
+    "panicSkipsBrain": true
+  }
+}

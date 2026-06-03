@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI VTuber Brain MVP</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <div>
+          <h1>小珂 Koko Brain</h1>
+          <p>本地 AI 主播大脑 MVP</p>
+        </div>
+        <nav class="links" aria-label="Project links">
+          <a href="/game/">城里人游戏</a>
+        </nav>
+        <div class="status">
+          <span id="brainStatus">LLM: checking</span>
+          <span id="chatMode">Manual chat</span>
+          <span id="socketStatus">连接中</span>
+          <strong id="state">idle</strong>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="Controls">
+        <button data-action="start">Start</button>
+        <button data-action="pause">Pause</button>
+        <button data-action="resume">Resume</button>
+        <button data-action="panic" class="danger">Panic Mode</button>
+        <button data-action="clear_context">Clear Context</button>
+        <div class="test-message">
+          <input id="testText" value="小珂你真的是 AI 吗？" aria-label="Message to Koko" />
+          <button id="sendTest">Send Message</button>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel focus">
+          <div class="panel-title">
+            <h2>当前决策</h2>
+            <span id="score">score 0</span>
+          </div>
+          <div id="selectedMessage" class="message-empty">暂无选中弹幕</div>
+          <h3>Selector Reasons</h3>
+          <ul id="reasons" class="list"></ul>
+          <h3>Decision Reason</h3>
+          <p id="decisionReason" class="text-block">尚未开始</p>
+        </article>
+
+        <article class="panel speak">
+          <div class="panel-title">
+            <h2>主播输出</h2>
+          </div>
+          <p id="speak" class="speak-text">等待 Start</p>
+          <div class="chips">
+            <span id="emotion">emotion: none</span>
+            <span id="gesture">gesture: none</span>
+            <span id="obsAction">obsAction: none</span>
+            <span id="outputSafety">safety: none</span>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-title">
+            <h2>最近弹幕</h2>
+          </div>
+          <div id="recentMessages" class="feed"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-title">
+            <h2>Safety Logs</h2>
+          </div>
+          <div id="safetyLogs" class="feed compact"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-title">
+            <h2>Memory Logs</h2>
+          </div>
+          <div id="memoryLogs" class="feed compact"></div>
+        </article>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

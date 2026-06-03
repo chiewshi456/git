@@ -1,0 +1,25 @@
+{
+  "name": "ai-vtuber-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local AI VTuber Brain MVP with mock chat, safety, memory, and dashboard.",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "test": "node --import tsx --test tests/safety.test.ts tests/messageSelector.test.ts tests/memory.test.ts tests/controller.test.ts tests/mockBrain.test.ts tests/ollamaBrain.test.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.2",
+    "@types/ws": "^8.5.13",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@9.15.4"
+}

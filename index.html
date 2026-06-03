@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>城里人：人生模拟原型</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="city-view" aria-label="城市地图">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">城里人</p>
+            <h1>人生模拟原型</h1>
+          </div>
+          <div class="calendar">
+            <span id="dayLabel">第 1 天</span>
+            <strong id="timeLabel">上午</strong>
+          </div>
+        </header>
+
+        <div id="map" class="map-grid"></div>
+
+        <section class="place-panel">
+          <div>
+            <p class="eyebrow">当前位置</p>
+            <h2 id="placeName">出租屋</h2>
+            <p id="placeDesc">一间狭小但能落脚的房间。</p>
+          </div>
+          <div id="actions" class="actions"></div>
+        </section>
+      </section>
+
+      <aside class="side-panel">
+        <section class="status-board">
+          <div class="identity">
+            <div class="portrait" aria-hidden="true">
+              <span></span>
+            </div>
+            <div>
+              <p class="eyebrow">主角</p>
+              <h2>阿成</h2>
+              <p>刚到城市，背着债务和一袋行李。</p>
+            </div>
+          </div>
+          <div id="stats" class="stats"></div>
+        </section>
+
+        <section class="goal-board">
+          <p class="eyebrow">本月目标</p>
+          <h2>撑过 30 天，还清 3000 元债务</h2>
+          <div class="debt-row">
+            <span>剩余债务</span>
+            <strong id="debtLabel">3000</strong>
+          </div>
+          <div class="meter">
+            <i id="debtMeter"></i>
+          </div>
+        </section>
+
+        <section class="bridge-board">
+          <p class="eyebrow">连动</p>
+          <h2>MIKA 直播大脑</h2>
+          <div class="bridge-row">
+            <span>状态</span>
+            <strong id="bridgeStatus">待连接</strong>
+          </div>
+          <a id="dashboardLink" href="http://localhost:3000/" target="_blank" rel="noreferrer">打开 Dashboard</a>
+        </section>
+
+        <section class="log-board">
+          <div class="log-heading">
+            <p class="eyebrow">城市日志</p>
+            <button id="resetBtn" type="button" title="重新开始">↻</button>
+          </div>
+          <ol id="log"></ol>
+        </section>
+      </aside>
+    </main>
+
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-box">
+        <p class="eyebrow" id="modalTag">事件</p>
+        <h2 id="modalTitle">标题</h2>
+        <p id="modalText"></p>
+        <div id="modalChoices" class="modal-choices"></div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
